@@ -1,0 +1,56 @@
+.image-carousel {
+  position: relative;
+}
+
+.images {
+  display: flex;
+  overflow: hidden;
+}
+
+.images img{
+  width: 100vw;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 2rem;
+}
+
+.nav-buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+.category {
+  margin: 3rem 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px 300px;
+}
+
+.category-card {
+  border: 4px solid black;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 2rem;
+  text-align: center;
+  margin: 20px;
+}
+
+.category-card img {
+  width: 150px;
+  height: 150px;
+}
+
+.category-card h3 {
+  margin-top: 1rem;
+  font-size: 24px;
+  color: black;
+}
