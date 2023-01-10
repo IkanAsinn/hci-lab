@@ -11,44 +11,40 @@ form.addEventListener("submit", event => {
     const gender = form.elements["gender"];
     const terms = form.elements["terms"];
 
-    const errors = [];
+    // Remove all error messages
+    $(".error-message").remove();
 
     // Required field validation
     if (username.value === "") {
-        errors.push("Username is required");
+        $('#username').after(`<div class="error-message">Username is required</div>`);
     }
     if (email.value === "") {
-        errors.push("Email is required");
+        $('#email').after(`<div class="error-message">Email is required</div>`);
     }
     if (password.value === "") {
-        errors.push("Password is required");
+        $('#password').after(`<div class="error-message">Password is required</div>`);
     }
     if (confirmPassword.value === "") {
-        errors.push("Confirm password is required");
+        $('#confirm-password').after(`<div class="error-message">Confirm password is required</div>`);
     }
     if (date.value === "") {
-        errors.push("Date is required");
+        $('#date').after(`<div class="error-message">Date is required</div>`);
     }
 
     // Minimum and maximum length validation
-    if (username.value.length < 3) {
-        errors.push("Username must be at least 3 characters long");
-    }
-    if (password.value.length < 8) {
-        errors.push("Password must be at least 8 characters long");
-    }
-    if (password.value.length > 20) {
-        errors.push("Password must be at most 20 characters long");
+    if (password.value.length < 8 && password.value.length > 20) {
+        $('#password').after(`<div class="error-message">Password must be at least 8-20 characters long</div>`);
     }
 
+
     // Email validation
-    if (!email.value.includes("@") || !email.value.includes(".")) {
-        errors.push("Email is invalid");
+    if ((!email.value.includes("@") || !email.value.includes(".")) && email.value.length > 0) {
+        $('#email').after(`<div class="error-message">Email is invalid</div>`);
     }
 
     // Password validation
     if (password.value !== confirmPassword.value) {
-        errors.push("Passwords do not match");
+        $('#confirm-password').after(`<div class="error-message">Passwords do not match</div>`);
     }
 
     let hasUppercase = false;
@@ -58,8 +54,8 @@ form.addEventListener("submit", event => {
             break;
         }
     }
-    if (!hasUppercase) {
-        errors.push("Password must contain at least one uppercase letter");
+    if (!hasUppercase && password.value.length > 0) {
+        $('#password').after(`<div class="error-message">Password must contain at least one uppercase letter</div>`);
     }
 
     let hasSpecialCharacter = false;
@@ -70,14 +66,9 @@ form.addEventListener("submit", event => {
             break;
         }
     }
-    if (!hasSpecialCharacter) {
-        errors.push("Password must contain at least one special character (!, @, #, $, %, ^, &, *)");
+    if (!hasSpecialCharacter && password.value.length > 0) {
+        $('#password').after(`<div class="error-message">Password must contain at least one special character (! @ # $ % ^ & *)</div>`);
     }
-
-    if (password.value.length < 8) {
-        errors.push("Password must be at least 8 characters long");
-    }
-
 
     // Gender validation
     let genderSelected = false;
@@ -88,29 +79,17 @@ form.addEventListener("submit", event => {
         }
     }
     if (!genderSelected) {
-        errors.push("Gender is required");
+        $('#gender').after(`<div class="error-message">Gender is required</div>`);
     }
 
     // Terms and conditions validation
     if (!terms.checked) {
-        errors.push("You must accept the terms and conditions to continue");
+        $('label[for="terms"]').after(`<div class="error-message"> You must accept the terms and conditions to continue</div>`);
     }
 
-    if (errors.length > 0) {
-        // Clear any existing error messages
-        $('.error-message').remove();
-
-        // Display error messages
-        for (let i = 0; i < errors.length; i++) {
-            $('form').before(`<div class="error-message">${errors[i]}</div>`);
-        }
-
-        // Scroll to the error messages
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    } else {
-        // Form is valid, submit the form
+    // If there are no error messages, submit the form
+    if ($(".error-message").length === 0) {
+        window.location.replace('./gallery.html');
     }
 
 });

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeliSkuy</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/register.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
@@ -13,56 +14,36 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html" class="navbar-brand"><img src="./images/logo.png" alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Gallery</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="#"><img src="./images/chat.png" alt="Chat"></a></li>
-                <li><a href="#"><img src="./images/cart.png" alt="Cart"></a></li>
-                <li><a href="#"><img src="./images/user.png" alt="User"></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="register">
-            <form action="#" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date">
-                <div class="gender-form">
-                    <label for="gender">Gender:</label>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                </div>
-                <input type="checkbox" id="terms" name="terms" value="accepted">
-                <label for="terms">I accept the terms and conditions</label>
-
-                <input type="submit" value="Submit">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo">
         </div>
-    </main>
-
-    <footer>
-        <div class="copyright">
-            Beli Skuy. &copy; Copyright 2023
-        </div>
-
-        <div class="social-media">
-            <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-        </div>
-    </footer>
+        <main>
+            <div class="register">
+                <form action="#" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                    <div class="gender-form">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <input type="checkbox" id="terms" name="terms" value="accepted">
+                    <label for="terms">I accept the terms and conditions</label>
+                    <input type="submit" value="Submit">
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>

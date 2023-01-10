@@ -1,81 +1,27 @@
-/* CSS Essentials */
-
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial;
-    min-height: 100vh;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 3rem;
-}
-
-.navbar-brand img {
-    width: 100px;
-}
-
-header nav ul {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
 }
 
-header nav ul li a {
-    color: black;
-    font-size: 24px;
-}
-
-.nav-buttons {
-    position: absolute;
-    top: 50%;
+.wrapper {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-inline: 2rem;
-}
-
-.nav-buttons button {
-    border: none;
-    background-color: transparent;
-    font-size: 36px;
-    color: white;
-}
-
-
-footer {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: .5rem 2rem;
+    justify-content: space-evenly;
+    width: 80vw;
+    padding: 3rem;
+    background-color: rgba(234, 234, 234, .5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
 }
 
-.copyright {
-    color: white;
-    font-size: 20px;
+.logo img {
+    width: 350px;
 }
-
-
-/* End of CSS Essentials */
-
 
 form {
     width: 300px;
@@ -91,7 +37,13 @@ form {
 
 label:not(:is([for="gender"], [for="male"], [for="female"], [for="other"], [for="terms"])){
     display: block;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+
+}
+
+label:not([for="terms"]) {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 input[type="text"],
@@ -102,8 +54,12 @@ input[type="date"] {
     padding: 12px 15px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
     border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.2rem;
 }
 
 input[type="radio"],
@@ -138,7 +94,5 @@ input[type="submit"]:hover {
 .error-message {
     color: red;
     font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
     margin-bottom: 10px;
 }
