@@ -8,6 +8,8 @@
   <title>Chat - Beli Skuy</title>
   <link rel="stylesheet" href="./css/chat.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/chat.js"></script>
 </head>
 
 <body>
@@ -24,10 +26,10 @@
   </header>
 
   <main>
+    <div class="chat-header">
+      <h2>Chat</h2>
+    </div>
     <div class="chat-container">
-      <div class="chat-header">
-        <h2>Chat</h2>
-      </div>
       <div class="chat-body">
         <div class="chat-message seller">
           <div class="sender">
@@ -74,11 +76,11 @@
           </div>
         </div>
       </div>
-      <div class="chat-input">
-        <input type="text" placeholder="Type your message here...">
-        <button>Send</button>
-      </div>
     </div>
+    <form class="chat-input" action="#">
+      <input type="text" placeholder="Type your message here..." id="chat-input-field">
+      <button type="submit">Send</button>
+    </form>
   </main>
 </body>
 
