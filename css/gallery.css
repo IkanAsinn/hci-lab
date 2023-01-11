@@ -64,7 +64,11 @@
 @media (max-width: 1000px) {
 
   .category-card img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .category {
+    grid-template-columns: 200px 200px;
   }
 }

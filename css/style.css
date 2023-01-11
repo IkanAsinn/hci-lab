@@ -9,6 +9,8 @@
 body {
   font-family: Arial;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -39,6 +41,10 @@ header nav ul{
 header nav ul li a {
   color: black;
   font-size: 24px;
+}
+
+main {
+  flex: 1;
 }
 
 .image-carousel {
@@ -103,6 +109,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: .5rem 2rem;
+  width: 100vw;
 }
 
 .copyright {
@@ -116,10 +123,18 @@ footer {
   }
 
   .navbar-brand img {
-    width: 80px;
+    width: 10vw;
   }
 
   header nav ul li a img {
     width: 35px;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .social-media img {
+    width: 40px;
   }
 }
