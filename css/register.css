@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/background.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,9 +33,25 @@ form {
     form {
         width: 90%;
     }
+
+    .logo img {
+        width: 200px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .wrapper {
+        padding: 1rem;
+    }
 }
 
-label:not(:is([for="gender"], [for="male"], [for="female"], [for="other"], [for="terms"])){
+label:not(:is([for="gender"], [for="male"], [for="female"], [for="other"], [for="terms"])) {
     display: block;
     /* margin-bottom: 5px; */
 
