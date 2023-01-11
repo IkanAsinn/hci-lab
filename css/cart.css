@@ -146,4 +146,28 @@ table {
   .cart-summary button {
     margin: auto;
   }
+
+  .prod-name {
+    text-align: center;
+  }
+
+  .prod-category {
+    text-align: center;
+  }
+
+  .desc {
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+
+  .price,
+  .quantity {
+
+    /* text-align: center; */
+  }
+
+  .total {
+    padding: 0 !important;
+    padding-right: 10px !important;
+  }
 }
