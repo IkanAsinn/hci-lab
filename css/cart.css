@@ -162,12 +162,12 @@ table {
 
   .price,
   .quantity {
-
+    padding: 0 !important;
     /* text-align: center; */
   }
 
   .total {
-    padding: 0 !important;
+
     padding-right: 10px !important;
   }
 }
