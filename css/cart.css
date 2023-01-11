@@ -167,7 +167,7 @@ table {
   }
 
   .total {
-
+    padding: 0 !important;
     padding-right: 10px !important;
   }
 }
