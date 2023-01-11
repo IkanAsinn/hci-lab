@@ -22,7 +22,8 @@
   font-weight: bold;
 }
 
-.sender, .chat-message-content {
+.sender,
+.chat-message-content {
   margin-bottom: 1rem;
 }
 
