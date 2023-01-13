@@ -103,7 +103,16 @@
 }
 
 @media (max-width: 1000px) {
-  .chat-container {
+  .chat-container, .chat-input {
     width: 90%;
   }
+
+  main {
+    margin-top: 2rem;
+  }
+
+  .chat-header h2 {
+    font-size: 2.5rem;
+  }
+
 }

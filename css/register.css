@@ -8,6 +8,10 @@ body {
     justify-content: center;
 }
 
+main {
+    flex: 0;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -25,8 +29,8 @@ body {
 
 form {
     width: 300px;
-    margin: 0 auto;
     text-align: left;
+    margin: 0 auto;
 }
 
 @media (max-width: 1000px) {
@@ -48,6 +52,7 @@ form {
 
     .wrapper {
         padding: 1rem;
+        flex-direction: column;
     }
 }
 

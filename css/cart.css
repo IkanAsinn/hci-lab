@@ -109,6 +109,11 @@
   font-size: 1.2rem;
   display: block;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.cart-summary button:hover {
+  background-color: rgb(200, 171, 53);
 }
 
 
